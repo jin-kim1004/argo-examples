@@ -13,7 +13,8 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 ### Forward Ports
 ```
 k get services -n argocd
-kubectl port-forward service/argocd-server -n argocd 8080:443
+kubectl port-forward service/argocd-server -n argocd 8080:443 : this did not work for me on my mac
+kubectl port-forward service/argocd-server -n argocd 8443:443 : this worked
 ```
 
 ### Get Credentials
